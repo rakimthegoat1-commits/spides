@@ -14,7 +14,7 @@ settings = {
 }
 
 local JUMP = Enum.Key.Space
-local SWING = Enum.Key.V
+local SWING = Enum.Key.LeftShift
 local CLUSTER = Enum.AbilityType.SecondaryAttack
 local UPPERCUT = Enum.AbilityType.Ability3
 
@@ -46,7 +46,7 @@ function on_activate_combo(ctx)
     send_key(JUMP, cfg("first_jump_hold_ms", 5))
     wait(cfg("swing_delay_ms", 15))
 
-    -- 2) SWING (Simple swing for backflip momentum - CRITICAL)
+    -- 2) SWING (Normal swing for backflip momentum - CRITICAL)
     send_key(SWING, cfg("swing_hold_ms", 25))
     wait(cfg("cluster_delay_ms", 30))
 
